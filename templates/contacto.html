@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto | Aula Abierta{% endblock %}
+
+{% block content %}
+<section class="page-heading container">
+    <p class="eyebrow">ESTAMOS PARA ESCUCHARTE</p>
+    <h1>Hablemos</h1>
+    <p class="lead">¿Tienes una consulta o una idea para compartir? Nos encantará saber de ti.</p>
+</section>
+<section class="container contact-layout">
+    <div class="contact-card">
+        <span class="contact-symbol">✉</span>
+        <p class="eyebrow">INFORMACIÓN</p>
+        <h2>Un espacio para conversar</h2>
+        <p>La información oficial de contacto de la institución puede añadirse aquí cuando esté disponible.</p>
+        <a class="email-link" href="{{ url_for('estudiantes') }}">Conoce a la comunidad <span aria-hidden="true">→</span></a>
+    </div>
+    <aside class="contact-note"><span aria-hidden="true">✦</span><p>Las buenas ideas empiezan con una conversación.</p><a href="{{ url_for('estudiantes') }}">Explora la comunidad →</a></aside>
+</section>
+{% endblock %}

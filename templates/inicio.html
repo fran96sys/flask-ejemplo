@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Aula Abierta{% endblock %}
+
+{% block content %}
+<section class="hero container">
+    <div class="hero-copy">
+        <p class="eyebrow">COMUNIDAD · APRENDIZAJE · FUTURO</p>
+        <h1>Aprender juntos<br><span>nos lleva más lejos.</span></h1>
+        <p class="lead">Un espacio para descubrir ideas, compartir experiencias y acompañar el crecimiento de cada estudiante.</p>
+        <a class="button" href="{{ url_for('estudiantes') }}">Conoce a nuestros estudiantes <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-art" aria-label="Ilustración de libros y aprendizaje" role="img">
+        <div class="sun"></div><div class="book book-one"></div><div class="book book-two"></div>
+        <div class="plant"><i></i><i></i><i></i><b></b></div><span class="art-note">ideas que<br>florecen</span>
+    </div>
+</section>
+<section class="welcome-section">
+    <div class="container welcome-grid">
+        <div><p class="eyebrow">BIENVENIDA</p><h2>Una comunidad con ganas de crecer</h2></div>
+        <p class="body-copy">Cada persona aporta una historia y una forma distinta de mirar el mundo. Aquí celebramos la curiosidad, el esfuerzo y todo lo que podemos construir cuando aprendemos en comunidad.</p>
+    </div>
+</section>
+<section class="container feature-row" aria-label="Lo que nos inspira">
+    <article class="feature-card"><span class="feature-icon icon-lilac">✦</span><h3>Curiosidad</h3><p>Hacer preguntas es el primer paso para encontrar nuevas respuestas.</p></article>
+    <article class="feature-card"><span class="feature-icon icon-peach">♡</span><h3>Comunidad</h3><p>Compartimos conocimientos y nos apoyamos en cada etapa.</p></article>
+    <article class="feature-card"><span class="feature-icon icon-mint">↗</span><h3>Progreso</h3><p>Avanzamos a nuestro ritmo, aprendiendo de cada experiencia.</p></article>
+</section>
+{% endblock %}

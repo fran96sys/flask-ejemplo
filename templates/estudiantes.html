@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Estudiantes | Aula Abierta{% endblock %}
+
+{% block content %}
+<section class="page-heading container">
+    <p class="eyebrow">NUESTRA COMUNIDAD</p>
+    <h1>Estudiantes</h1>
+    <p class="lead">Conoce a algunas de las personas que dan vida a nuestra comunidad de aprendizaje. Los registros mostrados son datos de ejemplo.</p>
+</section>
+<section class="container students-section">
+    <div class="section-label"><h2>Personas, caminos e ideas</h2><span>{{ estudiantes|length }} estudiantes</span></div>
+    <div class="student-grid">
+        {% for estudiante in estudiantes %}
+        <article class="student-card">
+            <div class="avatar" aria-hidden="true">{{ estudiante.nombre.split()[0][0] }}{{ estudiante.nombre.split()[-1][0] }}</div>
+            <div><h3>{{ estudiante.nombre }}</h3><p>{{ estudiante.carrera }}</p><span class="semester">{{ estudiante.semestre }}.º semestre</span></div>
+        </article>
+        {% else %}
+        <p class="empty-state">Aún no hay estudiantes para mostrar.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

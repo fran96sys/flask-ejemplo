@@ -1,0 +1,49 @@
+:root { --ink: #20233b; --muted: #73778d; --purple: #635bdb; --line: #e9eaf1; --paper: #f7f8fc; --white: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--white); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, .brand { font-family: 'Segoe UI', Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.site-header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -.5px; }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--purple); color: #fff; }
+.nav-links { display: flex; align-items: center; gap: 34px; color: var(--muted); font-size: 14px; font-weight: 600; }
+.nav-links a { transition: color .2s ease; }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--purple); }
+.menu-toggle { display: none; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); padding: 8px 12px; font: inherit; }
+.hero { min-height: 520px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 48px; padding-block: 64px; }
+.eyebrow { margin-bottom: 13px; color: var(--purple); font-size: 11px; font-weight: 700; letter-spacing: 1.7px; }
+h1 { margin-bottom: 20px; font-size: clamp(42px, 5.3vw, 66px); line-height: 1.12; letter-spacing: -3px; }
+h1 span { color: var(--purple); }
+.lead { max-width: 510px; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.button { display: inline-flex; gap: 18px; align-items: center; margin-top: 15px; padding: 13px 18px; border-radius: 9px; background: var(--purple); color: #fff; font-size: 14px; font-weight: 700; box-shadow: 0 9px 22px #635bdb30; transition: transform .2s, background .2s; }
+.button:hover { background: #5149c3; transform: translateY(-2px); }
+.hero-art { position: relative; height: 340px; overflow: hidden; border-radius: 30px; background: #f0efff; }
+.sun { position: absolute; top: 45px; right: 60px; width: 90px; height: 90px; border-radius: 50%; background: #ffd989; }
+.book { position: absolute; bottom: 65px; width: 125px; height: 166px; border-radius: 9px 14px 14px 9px; box-shadow: inset 10px 0 #ffffff55, 0 16px 26px #24204422; }
+.book-one { left: 95px; background: #e48e84; transform: rotate(-9deg); }
+.book-two { left: 205px; bottom: 50px; height: 184px; background: #746cda; transform: rotate(8deg); }
+.plant { position: absolute; right: 74px; bottom: 52px; width: 75px; height: 95px; border-bottom: 12px solid #d68b66; border-radius: 0 0 12px 12px; }
+.plant b { position: absolute; bottom: 7px; left: 34px; width: 5px; height: 78px; background: #5e907a; }
+.plant i { position: absolute; z-index: 1; width: 28px; height: 14px; border-radius: 100% 0 100% 0; background: #77a88a; }
+.plant i:nth-child(1) { bottom: 56px; left: 9px; transform: rotate(30deg); }.plant i:nth-child(2) { bottom: 43px; right: 7px; transform: rotate(70deg) scaleX(-1); }.plant i:nth-child(3) { bottom: 70px; right: 13px; transform: rotate(65deg) scaleX(-1); }
+.art-note { position: absolute; right: 22px; top: 25px; color: #655f99; font: 700 14px/1.4 'Segoe UI', Arial, sans-serif; transform: rotate(6deg); }
+.welcome-section { padding: 62px 0; background: var(--paper); }
+.welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
+h2 { margin-bottom: 12px; font-size: 30px; line-height: 1.25; letter-spacing: -1px; }
+.welcome-grid h2 { max-width: 390px; margin-bottom: 0; }
+.body-copy { margin-bottom: 0; color: var(--muted); line-height: 1.85; }
+.feature-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding-block: 54px 70px; }
+.feature-card { padding: 26px; border: 1px solid var(--line); border-radius: 14px; }
+.feature-icon { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 18px; border-radius: 12px; font-size: 19px; }
+.icon-lilac { background: #f0efff; color: #635bdb; }.icon-peach { background: #fff1eb; color: #dc8b6b; }.icon-mint { background: #eaf6f0; color: #4d9675; }
+.feature-card h3, .student-card h3 { margin-bottom: 5px; font-size: 17px; }.feature-card p, .student-card p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+.page-heading { padding-block: 72px 42px; }.page-heading h1 { margin-bottom: 14px; font-size: clamp(42px, 5vw, 58px); }.page-heading .lead { margin-bottom: 0; }
+.students-section { padding-bottom: 86px; }.section-label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }.section-label h2 { margin: 0; font-size: 22px; }.section-label span { color: var(--muted); font-size: 13px; }
+.student-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }.student-card { display: flex; align-items: center; gap: 15px; padding: 21px; border: 1px solid var(--line); border-radius: 13px; }.avatar { display: grid; place-items: center; flex: 0 0 50px; height: 50px; border-radius: 16px; background: #eeedff; color: var(--purple); font: 700 14px 'Segoe UI', Arial, sans-serif; }.student-card:nth-child(3n+2) .avatar { background: #fff0e9; color: #c87859; }.student-card:nth-child(3n) .avatar { background: #eaf6f0; color: #4d9675; }.semester { display: inline-block; margin-top: 8px; color: var(--purple); font-size: 12px; font-weight: 700; }.empty-state { color: var(--muted); }
+.contact-layout { display: grid; grid-template-columns: 1.3fr .7fr; gap: 24px; padding-bottom: 90px; }.contact-card, .contact-note { padding: 36px; border: 1px solid var(--line); border-radius: 18px; }.contact-card { background: #fafaff; }.contact-symbol { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 27px; border-radius: 15px; background: #eeedff; color: var(--purple); font-size: 21px; }.contact-card h2 { font-size: 27px; }.contact-card > p:not(.eyebrow) { max-width: 480px; color: var(--muted); }.contact-note { display: flex; flex-direction: column; justify-content: center; background: #fff7ed; }.contact-note > span { color: #d58b5d; font-size: 30px; }.contact-note p { margin: 15px 0 20px; font: 700 23px/1.4 'Segoe UI', Arial, sans-serif; }.contact-note a { color: #9c633f; font-size: 14px; font-weight: 700; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }.footer-inner { display: flex; justify-content: space-between; gap: 16px; padding-block: 22px; }
+@media (max-width: 760px) { .container { width: min(100% - 36px, 560px); }.nav { min-height: 68px; }.menu-toggle { display: block; }.nav-links { display: none; position: absolute; z-index: 5; top: 67px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 18px 16px; border-bottom: 1px solid var(--line); background: #fff; }.nav-links.is-open { display: flex; }.nav-links a { padding: 10px 0; }.hero { grid-template-columns: 1fr; gap: 35px; padding-block: 54px; }.hero-art { height: 280px; }.book-one { left: 15%; }.book-two { left: 39%; }.plant { right: 12%; }.welcome-grid { grid-template-columns: 1fr; gap: 20px; }.feature-row, .student-grid { grid-template-columns: 1fr; }.feature-row { padding-block: 34px 50px; }.page-heading { padding-block: 54px 32px; }.section-label { align-items: flex-start; gap: 10px; flex-direction: column; }.contact-layout { grid-template-columns: 1fr; padding-bottom: 55px; }.contact-card, .contact-note { padding: 26px; }.footer-inner { flex-direction: column; gap: 4px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
